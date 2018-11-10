@@ -1,0 +1,18 @@
+{
+  "name": "eemerg-models",
+  "version": "0.0.1",
+  "description": "Eemerg model",
+  "main": "dist/index.js",
+  "author": "D'andre Gregory",
+  "license": "MIT",
+  "scripts": {
+    "install": "yarn run build",
+    "build": "yarn run clean; yarn run babel src -d dist ",
+    "clean": "rm -fr dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5"
+  }
+}
