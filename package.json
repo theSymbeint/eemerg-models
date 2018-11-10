@@ -6,8 +6,9 @@
   "author": "D'andre Gregory",
   "license": "MIT",
   "scripts": {
+    "prepare": "ls ./node_modules",
     "install": "yarn run build",
-    "build": "yarn run clean; babel src -d dist ",
+    "build": "yarn run clean;  ./node_modules/.bin/babel src -d dist ",
     "clean": "rm -fr dist"
   },
   "devDependencies": {
