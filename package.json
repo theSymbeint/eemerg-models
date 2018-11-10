@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "install": "yarn run build",
-    "build": "yarn run clean; yarn run babel src -d dist ",
+    "build": "yarn run clean; babel src -d dist ",
     "clean": "rm -fr dist"
   },
   "devDependencies": {
