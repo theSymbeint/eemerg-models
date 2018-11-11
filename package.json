@@ -11,7 +11,8 @@
     "build": "yarn run clean;  ./node_modules/.bin/babel src -d dist ",
     "clean": "rm -fr dist"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5"
