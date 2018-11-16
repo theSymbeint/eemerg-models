@@ -10,9 +10,13 @@
     "install": "yarn run build",
     "build": "yarn run clean;  ./node_modules/.bin/babel src -d dist ",
     "clean": "rm -fr dist",
-    "pwatch":"onchange './src/**/*.js' -- prettier --write {{changed}}"
+    "pwatch": "onchange './src/**/*.js' -- prettier --write {{changed}}",
+    "test": "jest"
   },
   "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
     "onchange": "^5.1.0",
     "prettier": "1.15.2"
   },

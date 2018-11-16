@@ -8,30 +8,32 @@ class ServiceCall {
         CANCELLED: 6,
     }
     constructor(sc) {
-        if (typeof sc === "object") {
-            const {
-                id,
-                srId,
-                bidId,
-                userId,
-                createdAt,
-                updatedAt,
-                arrivalAt,
-                completedAt,
-                cancelledCallAt,
-                status,
-            } = sc
+        const {
+            id,
+            srId,
+            bidId,
+            userId,
+            createdAt,
+            updatedAt,
+            arrivalAt,
+            completedAt,
+            cancelledCallAt,
+            notes,
+            status,
+        } = sc || {}
 
-            this.id = id || undefined
-            this.srId = srId || undefined
-            this.bidId = bidId || undefined
-            this.userId = userId || undefined
-            this.createdAt = createdAt || undefined
-            this.updatedAt = updatedAt || undefined
-            this.arrivalAt = arrivalAt || undefined
-            this.completedAt = completedAt || undefined
-            this.cancelledCallAt = cancelledCallAt || undefined
-            this.status = status || undefined
-        }
+        this.id = id || undefined
+        this.srId = srId || undefined
+        this.bidId = bidId || undefined
+        this.userId = userId || undefined
+        this.createdAt = createdAt || undefined
+        this.updatedAt = updatedAt || undefined
+        this.arrivalAt = arrivalAt || undefined
+        this.completedAt = completedAt || undefined
+        this.cancelledCallAt = cancelledCallAt || undefined
+        this.notes = notes || undefined
+        this.status = status || undefined
     }
 }
+
+export default ServiceCall

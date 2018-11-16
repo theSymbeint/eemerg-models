@@ -11,19 +11,33 @@ class Bid {
         ARCHIVED: 7,
     }
 
-    constructor({ id, spId, srId, billables, createdAt, updatedAt, status }) {
+    constructor(bid) {
+        const {
+            id,
+            spId,
+            srId,
+            billables,
+            createdAt,
+            updatedAt,
+            notes,
+            adminNotes,
+            status,
+        } = bid || {}
+
         this.id = id || undefined
         this.spId = spId || undefined
         this.srId = srId || undefined
         this.billables = billables || []
+        this.notes = notes || undefined
+        this.adminNotes = adminNotes || undefined
         this.createdAt = createdAt || undefined
         this.updatedAt = updatedAt || undefined
 
         this.bArry = []
 
-        this.status = status || this.STATUS_LEVEL.OPEN
+        this.status = status || Bid.STATUS_LEVEL.OPEN
 
-        if (this.billables) {
+        if (this.billables.length > 0) {
             JSON.parse(this.billables).forEach(b => {
                 this.bArry.push(new Billable(b))
             })
