@@ -9,12 +9,17 @@
     "prepare": "ls ./node_modules/.bin",
     "install": "yarn run build",
     "build": "yarn run clean;  ./node_modules/.bin/babel src -d dist ",
-    "clean": "rm -fr dist"
+    "clean": "rm -fr dist",
+    "pwatch":"onchange './src/**/*.js' -- prettier --write {{changed}}"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "onchange": "^5.1.0",
+    "prettier": "1.15.2"
+  },
   "dependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.5"
   }
 }

@@ -1,6 +1,5 @@
-import Bid from "./bid";
-import Billable from "./billable";
-import ServiceRequest from "./request";
+import Bid from "./bid"
+import Billable from "./billable"
+import ServiceRequest from "./request"
 
-
-export { Bid, Billable, ServiceRequest };
+export { Bid, Billable, ServiceRequest }

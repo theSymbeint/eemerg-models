@@ -1,57 +1,57 @@
-import Billable from "./billable";
+import Billable from "./billable"
 
 class Bid {
-   
+    static STATUS_LEVEL = {
+        OPEN: 1,
+        PENDING: 2,
+        CANCEL_PENDING: 3,
+        ACCEPTED: 4,
+        REJECTED: 5,
+        CANCELLED: 6,
+        ARCHIVED: 7,
+    }
 
-	constructor({
-		id, spId, srId, billables, createdAt, updatedAt, status,
-	}) {
-		this.id = id || undefined;
-		this.spId = spId || undefined;
-		this.srId = srId || undefined;
-		this.billables = billables || [];
-		this.createdAt = createdAt || undefined;
-		this.updatedAt = updatedAt || undefined;
-    
-		this.bArry = [];
-		this.STATUS_LEVEL = {
-			OPEN: 1, PENDING: 2, CANCEL_PENDING: 3, ACCEPTED: 4, REJECTED: 5, CANCELLED: 6, ARCHIVED: 7 
-		};
-		this.status = status || this.STATUS_LEVEL.OPEN;
+    constructor({ id, spId, srId, billables, createdAt, updatedAt, status }) {
+        this.id = id || undefined
+        this.spId = spId || undefined
+        this.srId = srId || undefined
+        this.billables = billables || []
+        this.createdAt = createdAt || undefined
+        this.updatedAt = updatedAt || undefined
 
-		if (this.billables) {
-			JSON.parse(this.billables).forEach((b) => {
-				this.bArry.push(new Billable(b));
-			});
-		}
-	}
+        this.bArry = []
 
+        this.status = status || this.STATUS_LEVEL.OPEN
 
-	persistMe(){
-		return {
-			id:         this.id,
-			spId:       this.spId,
-			srId:       this.srId,
-			billables:  this.billables,
-			createdAt:  this.createdAt,
-			updatedAt:  this.updatedAt,
-			status:     this.status
-		};
-	}
+        if (this.billables) {
+            JSON.parse(this.billables).forEach(b => {
+                this.bArry.push(new Billable(b))
+            })
+        }
+    }
 
-	get total() {
+    persistMe() {
+        return {
+            id: this.id,
+            spId: this.spId,
+            srId: this.srId,
+            billables: this.billables,
+            createdAt: this.createdAt,
+            updatedAt: this.updatedAt,
+            status: this.status,
+        }
+    }
 
-		let v = 0;
+    get total() {
+        let v = 0
 
-		if(this.bArry){
-			this.bArry.forEach((b) => {
-				v = v + parseInt(b.total);
-			});
-		}
-		return v;
-	}
+        if (this.bArry) {
+            this.bArry.forEach(b => {
+                v = v + parseInt(b.total)
+            })
+        }
+        return v
+    }
 }
 
-
-
-export default Bid;
+export default Bid
