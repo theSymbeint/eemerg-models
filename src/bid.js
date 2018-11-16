@@ -1,6 +1,5 @@
 import Billable from "./billable";
 
-
 class Bid {
    
 
