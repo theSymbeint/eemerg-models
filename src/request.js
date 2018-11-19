@@ -96,6 +96,17 @@ class ServiceRequest {
             "createdAt",
         ]
     }
+
+    persist() {
+        let _obj = {}
+        //persist what is defined
+        this._request_data.forEach(o => {
+            if (this[o] !== undefined) {
+                _obj[o] = this[o]
+            }
+        })
+        return _obj
+    }
 }
 
 export default ServiceRequest

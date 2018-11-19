@@ -51,6 +51,30 @@ class ServiceProvider {
         this.vehicleType = vehicleType || undefined
         this.createdAt = createdAt || undefined
         this.updatedAt = updatedAt || undefined
+
+        this._provider_data = [
+            "id",
+            "accountType",
+            "address",
+            "active",
+            "email",
+            "phone",
+            "city",
+            "state",
+            "zip",
+            "lat",
+            "lng",
+            "coverage",
+            "firstName",
+            "lastName",
+            "maxServiceArea",
+            "vehicleType",
+            "serviceRatingPoints",
+            "serviceRatingCount",
+            "serviceCallCount",
+            "createdAt",
+            "updatedAt",
+        ]
     }
 
     serviceRating() {
@@ -60,7 +84,17 @@ class ServiceProvider {
         return this.serviceRatingPoints / this.serviceRatingCount
     }
 
-    persist() {}
+    persist() {
+        let _obj = {}
+        //persist what is defined
+        this._provider_data.forEach(o => {
+            if (this[o] !== undefined) {
+                _obj[o] = this[o]
+            }
+        })
+
+        return _obj
+    }
 }
 
 export default ServiceProvider
