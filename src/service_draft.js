@@ -15,7 +15,7 @@ class ServiceDraft {
         this.eemerg_fee = eemerg_fee || undefined
         this.serviceChargeRate = serviceChargeRate || undefined
         this.serviceCharge = serviceCharge || undefined
-        this.createdAt = this.createdAt || undefined
+        this.createdAt = createdAt || undefined
         this.updatedAt = updatedAt || undefined
     }
 

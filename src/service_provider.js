@@ -8,6 +8,7 @@ class ServiceProvider {
 
     constructor(sp) {
         const {
+            id,
             accountType,
             address,
             active,
@@ -23,17 +24,19 @@ class ServiceProvider {
             lastName,
             maxServiceArea,
             vehicleType,
-            servicePoints,
+            serviceRatingPoints,
+            serviceRatingCount,
             serviceCallCount,
             createdAt,
             updatedAt,
         } = sp || {}
-
+        this.id = id || undefined
         this.accountType = accountType || undefined
         this.active = active || false
         this.email = email || undefined
         this.phone = phone || undefined
-        this.servicePoints = servicePoints || 0
+        this.serviceRatingPoints = serviceRatingPoints || 0
+        this.serviceRatingCount = serviceRatingCount || 0
         this.serviceCallCount = serviceCallCount || 0
         this.address = address || undefined
         this.city = city || undefined
@@ -51,11 +54,13 @@ class ServiceProvider {
     }
 
     serviceRating() {
-        if (this.serviceCallCount === 0) {
+        if (this.serviceRatingCount === 0 || this.serviceRatingPoints === 0) {
             return 0
         }
-        return this.servicePoints / this.serviceCallCount
+        return this.serviceRatingPoints / this.serviceRatingCount
     }
+
+    persist() {}
 }
 
 export default ServiceProvider
