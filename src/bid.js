@@ -17,6 +17,8 @@ class Bid {
             spId,
             srId,
             billables,
+            bidDuration,
+            ert,
             createdAt,
             updatedAt,
             notes,
@@ -28,8 +30,10 @@ class Bid {
         this.spId = spId || undefined
         this.srId = srId || undefined
         this.billables = billables || []
-        this.notes = notes || undefined
-        this.adminNotes = adminNotes || undefined
+        this.notes = notes || ""
+        this.adminNotes = adminNotes || ""
+        this.ert = ert ||undefined
+        this.bidDuration = bidDuration || 15
         this.createdAt = createdAt || undefined
         this.updatedAt = updatedAt || undefined
 
@@ -49,9 +53,13 @@ class Bid {
             id: this.id,
             spId: this.spId,
             srId: this.srId,
+            ert: this.ert,
+            bidDuration: this.bidDuration,
             billables: this.billables,
             createdAt: this.createdAt,
             updatedAt: this.updatedAt,
+            notes: this.notes,
+            adminNotes: this.adminNotes,
             status: this.status,
         }
     }
