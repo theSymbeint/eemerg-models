@@ -1,4 +1,4 @@
-import {Call} from "../src/index"
+import {ServiceCall} from "../src/index"
 
 
 
@@ -6,7 +6,7 @@ import {Call} from "../src/index"
 
 
 test('Call', () => {
-  let c =  new Call()
+  let c =  new ServiceCall()
   
-  expect(c).toBeInstanceOf(Call);
+  expect(c).toBeInstanceOf(ServiceCall);
 })
