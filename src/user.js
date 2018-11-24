@@ -8,6 +8,7 @@ class User {
             lastName,
             emailVerified,
             phoneVerified,
+            anonymous,
             createdAt,
             updatedAt,
         } = user || {}
@@ -20,6 +21,7 @@ class User {
             "lastName",
             "emailVerified",
             "phoneVerified",
+            "anonymous",
             "createdAt",
             "updatedAt",
         ]
@@ -31,6 +33,7 @@ class User {
         this.lastName = lastName || undefined
         this.emailVerified = emailVerified || undefined
         this.phoneVerified = phoneVerified || undefined
+        this.anonymous = anonymous || false
         this.createdAt = createdAt || undefined
         this.updatedAt = updatedAt || undefined
     }
