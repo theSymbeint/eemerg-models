@@ -11,6 +11,7 @@ class ServiceCall {
         const {
             id,
             srId,
+            spId,
             bidId,
             userId,
             createdAt,
@@ -24,6 +25,7 @@ class ServiceCall {
 
         this.id = id || undefined
         this.srId = srId || undefined
+        this.spId = spId || undefined
         this.bidId = bidId || undefined
         this.userId = userId || undefined
         this.createdAt = createdAt || undefined
