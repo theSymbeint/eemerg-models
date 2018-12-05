@@ -29,7 +29,7 @@ class Bid {
         this.id = id || undefined
         this.spId = spId || undefined
         this.srId = srId || undefined
-        this.billables = billables || []
+        this.billables = billables || undefined
         this.notes = notes || ""
         this.adminNotes = adminNotes || ""
         this.ert = ert ||undefined
@@ -41,7 +41,7 @@ class Bid {
 
         this.status = status || Bid.STATUS_LEVEL.OPEN
 
-        if (this.billables.length > 0) {
+        if (this.billables !== undefined) {
             JSON.parse(this.billables).forEach(b => {
                 this.bArry.push(new Billable(b))
             })
