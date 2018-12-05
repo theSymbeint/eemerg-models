@@ -32,7 +32,7 @@ class Bid {
         this.billables = billables || undefined
         this.notes = notes || ""
         this.adminNotes = adminNotes || ""
-        this.ert = ert ||undefined
+        this.ert = ert || undefined
         this.bidDuration = bidDuration || 15
         this.createdAt = createdAt || undefined
         this.updatedAt = updatedAt || undefined

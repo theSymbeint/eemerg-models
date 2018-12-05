@@ -1,12 +1,7 @@
-import {ServiceCall} from "../src/index"
+import { ServiceCall } from "../src/index"
 
+test("Call", () => {
+    let c = new ServiceCall()
 
-
-
-
-
-test('Call', () => {
-  let c =  new ServiceCall()
-  
-  expect(c).toBeInstanceOf(ServiceCall);
+    expect(c).toBeInstanceOf(ServiceCall)
 })
