@@ -6,7 +6,6 @@
   "author": "D'andre Gregory",
   "license": "MIT",
   "scripts": {
-    "install": "yarn run build",
     "build": "yarn run clean;  ./node_modules/.bin/babel src -d dist ",
     "clean": "rm -fr dist",
     "pwatch": "onchange './src/**/*.js' './__test__/**/*.js' -- prettier --write {{changed}}",
