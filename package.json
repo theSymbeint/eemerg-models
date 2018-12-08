@@ -6,7 +6,6 @@
   "author": "D'andre Gregory",
   "license": "MIT",
   "scripts": {
-    "prepare": "ls ./node_modules/.bin",
     "install": "yarn run build",
     "build": "yarn run clean;  ./node_modules/.bin/babel src -d dist ",
     "clean": "rm -fr dist",
@@ -14,7 +13,6 @@
     "test": "jest"
   },
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
     "onchange": "^5.1.0",
