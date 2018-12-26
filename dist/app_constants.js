@@ -3,7 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ERT = exports.BIDSLOTS = exports.BIDDURATION = exports.APPCON = exports.BASE_COST_PROVIDER = exports.BASE_COST_EEMERG = void 0;
+exports.US_STATES = exports.VEHICLE_MAKES = exports.VEHICLE_TYPE = exports.SERVICE_AREA = exports.ERT = exports.BIDSLOTS = exports.BIDDURATION = exports.APPCON = exports.BASE_COST_PROVIDER = exports.BASE_COST_EEMERG = void 0;
+
+var _cars = _interopRequireDefault(require("./cars"));
+
+var _states = _interopRequireDefault(require("./states"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var tow = {
   item: "EEMERG TOW",
   cost: 20,
@@ -102,3 +109,41 @@ var BIDDURATION = [{
   value: 16
 }];
 exports.BIDDURATION = BIDDURATION;
+var SERVICE_AREA = [{
+  value: 10,
+  text: "10 Mile Radius"
+}, {
+  value: 20,
+  text: "20 Mile Radius"
+}, {
+  value: 30,
+  text: "30 Mile Radius"
+}, {
+  value: 50,
+  text: "50 Mile Radius"
+}, {
+  value: 65,
+  text: "65 Mile Radius"
+}];
+exports.SERVICE_AREA = SERVICE_AREA;
+var VEHICLE_TYPE = [{
+  value: "",
+  text: "None"
+}, {
+  value: "SV",
+  text: "Service Vehicle"
+}, {
+  value: "TR",
+  text: "Truck"
+}, {
+  value: "WR",
+  text: "Wrecker"
+}, {
+  value: "RB",
+  text: "Rollback"
+}];
+exports.VEHICLE_TYPE = VEHICLE_TYPE;
+var US_STATES = new _states.default().getStatesList();
+exports.US_STATES = US_STATES;
+var VEHICLE_MAKES = new _cars.default().getCarMakes();
+exports.VEHICLE_MAKES = VEHICLE_MAKES;
