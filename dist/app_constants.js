@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.US_STATES = exports.VEHICLE_MAKES = exports.VEHICLE_TYPE = exports.SERVICE_AREA = exports.ERT = exports.BIDSLOTS = exports.BIDDURATION = exports.APPCON = exports.BASE_COST_PROVIDER = exports.BASE_COST_EEMERG = void 0;
+exports.TAX_ID_TYPES = exports.COMPANY_TYPES = exports.US_STATES = exports.VEHICLE_MAKES = exports.VEHICLE_TYPE = exports.SERVICE_AREA = exports.ERT = exports.BIDSLOTS = exports.BIDDURATION = exports.APPCON = exports.BASE_COST_PROVIDER = exports.BASE_COST_EEMERG = void 0;
 
 var _cars = _interopRequireDefault(require("./cars"));
 
@@ -143,6 +143,43 @@ var VEHICLE_TYPE = [{
   text: "Rollback"
 }];
 exports.VEHICLE_TYPE = VEHICLE_TYPE;
+var COMPANY_TYPES = [{
+  value: "sole_proprietor",
+  text: "Ind/Sole Proprietor"
+}, {
+  value: "c_corp",
+  text: "C Corporation"
+}, {
+  value: "s_corp",
+  text: "S Corporation"
+}, {
+  value: "partnership",
+  text: "Partnership"
+}, {
+  value: "trust_estate",
+  text: "Trust/estate"
+}, {
+  value: "llc_sole",
+  text: "LLC/Sole proprietor"
+}, {
+  value: "llc_c_corp",
+  text: "LLC/ C Corporation"
+}, {
+  value: "llc_s_corp",
+  text: "LLC/S Corporation"
+}, {
+  value: "llc_partnership",
+  text: "LLC/Partnership"
+}];
+exports.COMPANY_TYPES = COMPANY_TYPES;
+var TAX_ID_TYPES = [{
+  value: "ssn",
+  text: "SSN"
+}, {
+  value: "ein",
+  text: "EIN"
+}];
+exports.TAX_ID_TYPES = TAX_ID_TYPES;
 var US_STATES = new _states.default().getStatesList();
 exports.US_STATES = US_STATES;
 var VEHICLE_MAKES = new _cars.default().getCarMakes();

@@ -81,6 +81,18 @@ Object.defineProperty(exports, "ERT", {
     return _app_constants.ERT;
   }
 });
+Object.defineProperty(exports, "TAX_ID_TYPES", {
+  enumerable: true,
+  get: function get() {
+    return _app_constants.TAX_ID_TYPES;
+  }
+});
+Object.defineProperty(exports, "COMPANY_TYPES", {
+  enumerable: true,
+  get: function get() {
+    return _app_constants.COMPANY_TYPES;
+  }
+});
 
 var _bid = _interopRequireDefault(require("./bid"));
 

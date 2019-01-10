@@ -34,8 +34,6 @@ const APPCON = {
     BASE_COST_PROVIDER: BASE_COST_PROVIDER,
 }
 
-
-
 const BIDSLOTS = 2
 
 const ERT = [
@@ -66,10 +64,26 @@ const VEHICLE_TYPE = [
     { value: "RB", text: "Rollback" },
 ]
 
+const COMPANY_TYPES = [
+    { value: "sole_proprietor", text: "Ind/Sole Proprietor" },
+    { value: "c_corp", text: "C Corporation" },
+    { value: "s_corp", text: "S Corporation" },
+    { value: "partnership", text: "Partnership" },
+    { value: "trust_estate", text: "Trust/estate" },
+    { value: "llc_sole", text: "LLC/Sole proprietor" },
+    { value: "llc_c_corp", text: "LLC/ C Corporation" },
+    { value: "llc_s_corp", text: "LLC/S Corporation" },
+    { value: "llc_partnership", text: "LLC/Partnership" },
+]
 
-const US_STATES =  new States().getStatesList();
+const TAX_ID_TYPES = [
+    { value: "ssn", text: "SSN" },
+    { value: "ein", text: "EIN" },
+]
 
-const VEHICLE_MAKES = new Cars().getCarMakes();
+const US_STATES = new States().getStatesList()
+
+const VEHICLE_MAKES = new Cars().getCarMakes()
 
 export {
     BASE_COST_EEMERG,
@@ -81,5 +95,7 @@ export {
     SERVICE_AREA,
     VEHICLE_TYPE,
     VEHICLE_MAKES,
-    US_STATES
+    US_STATES,
+    COMPANY_TYPES,
+    TAX_ID_TYPES,
 }

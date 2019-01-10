@@ -5,7 +5,16 @@ import ServiceProvider from "./service_provider"
 import User from "./user"
 import ServiceDraft from "./service_draft"
 import ServiceCall from "./call"
-import {BASE_COST_EEMERG, BASE_COST_PROVIDER,APPCON,BIDDURATION,BIDSLOTS,ERT} from "./app_constants"
+import {
+    BASE_COST_EEMERG,
+    BASE_COST_PROVIDER,
+    APPCON,
+    BIDDURATION,
+    BIDSLOTS,
+    ERT,
+    TAX_ID_TYPES,
+    COMPANY_TYPES,
+} from "./app_constants"
 
 export {
     Bid,
@@ -20,5 +29,7 @@ export {
     APPCON,
     BIDDURATION,
     BIDSLOTS,
-    ERT
+    ERT,
+    TAX_ID_TYPES,
+    COMPANY_TYPES,
 }
