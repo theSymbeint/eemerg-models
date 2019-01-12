@@ -6,8 +6,6 @@ class ServiceProvider {
         RB: "ROLLBACK",
     }
 
-
-
     constructor(sp) {
         const {
             id,
@@ -47,9 +45,6 @@ class ServiceProvider {
         this.zip = zip || undefined
         this.lat = lat || undefined
         this.lng = lng || undefined
-        this.bankName  || undefined
-        this.accountNumber = accountnumber || undefined
-        this.routingNumber = routingNUmber
         this.companyName = companyName || undefined
         this.coverage = coverage || undefined
         this.firstName = firstName || undefined
