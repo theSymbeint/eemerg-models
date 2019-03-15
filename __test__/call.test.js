@@ -1,4 +1,4 @@
-import { ServiceCall } from "../src/index"
+import  ServiceCall  from "../src/call"
 
 test("Call", () => {
     let c = new ServiceCall()

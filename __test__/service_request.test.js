@@ -1,4 +1,4 @@
-import { ServiceRequest } from "../src/index"
+import  ServiceRequest  from "../src/request"
 
 test("ServiceRequest", () => {
     let sr = new ServiceRequest()

@@ -69,7 +69,7 @@ class Bid {
 
         if (this.bArry) {
             this.bArry.forEach(b => {
-                v = v + parseInt(b.total)
+                v = v + parseFloat(b.total)
             })
         }
         return v

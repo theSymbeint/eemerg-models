@@ -82,7 +82,7 @@ function () {
 
       if (this.bArry) {
         this.bArry.forEach(function (b) {
-          v = v + parseInt(b.total);
+          v = v + parseFloat(b.total);
         });
       }
 
